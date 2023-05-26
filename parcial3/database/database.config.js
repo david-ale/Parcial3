@@ -1,8 +1,9 @@
 const mongoose = require('mongoose');
+const urlConnection = "mongodb+srv://admin:admin@cluster0.aif9hr5.mongodb.net"
 
 const dbConnection = async()=>{
     try{
-        mongoose.connect(process.env.DB_CONNECTION,{
+        mongoose.connect(urlConnection,{
             autoIndex:true
         })
         console.log('Database Online')
